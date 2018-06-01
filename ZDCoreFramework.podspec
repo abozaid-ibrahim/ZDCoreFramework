@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZDCoreFramework'
-  s.version          = '0.0.2'
+  s.version          = '0.0.4'
   s.summary          = 'ZDCoreFramework makes your code life easier with one develop style.'
   s.description      = 'ZDCoreframework contains a set of extensions & Base classes that you should follow in your app development '
 
@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ZDCoreFramework/Classes/*'
+  s.source_files = 'ZDCoreFramework/Classes/**/*.swift'
 
 end
