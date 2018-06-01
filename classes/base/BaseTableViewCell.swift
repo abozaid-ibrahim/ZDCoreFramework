@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol BaseTableViewCell {
-    var identifier:String {get}
+public protocol BaseTableViewCell {
+     var identifier:String {get}
 }
