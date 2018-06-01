@@ -7,18 +7,16 @@
 //
 
 import UIKit
+import ZDCoreFramework
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,BaseTableViewCell{
+    var identifier: String = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
 
