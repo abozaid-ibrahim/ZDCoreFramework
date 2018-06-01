@@ -1,0 +1,6 @@
+framework module ZDCoreFramework {
+  umbrella header "ZDCoreFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}
