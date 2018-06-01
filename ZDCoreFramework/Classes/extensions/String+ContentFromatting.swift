@@ -9,15 +9,7 @@
 import Foundation
 
 extension String {
-//    func htmlToText() -> NSAttributedString? {
-//        do {
-//            let str = try NSAttributedString(data: self.data(using: String.Encoding.unicode, allowLossyConversion: true)!, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
-//            return str
-//        } catch {
-//            print(error)
-//            return nil
-//        }
-//    }
+
 
     func englishNumbers() -> String {
 
@@ -75,15 +67,6 @@ extension String {
         return emailTest.evaluate(with: self)
     }
   
-
-//    var html2AttributedString: NSAttributedString? {
-//        do {
-//            return try NSAttributedString(data: Data(utf8), options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-//        } catch {
-//            print("error:", error)
-//            return nil
-//        }
-//    }
 
     static func random(length: Int = 20) -> String {
         let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
