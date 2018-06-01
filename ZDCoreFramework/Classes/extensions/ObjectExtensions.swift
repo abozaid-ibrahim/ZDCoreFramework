@@ -48,45 +48,32 @@ extension Date {
             let interval = Calendar.current.dateComponents([.year, .month, .day, .hour ], from: self, to: Date())
 
             if let year = interval.year, year > 0 {
-                return year == 1 ? "\(year)" +  s.id.year :
-                    "\(year)" + s.id.years
+                return year == 1 ? "\(year)" +  "year" :
+                    "\(year)" + "years"
             } else if let month = interval.month, month > 0 {
-                return month == 1 ? "\(month)" + s.id.month :
-                    "\(month)" +  s.id.months
+                return month == 1 ? "\(month)" + "month" :
+                    "\(month)" +  "months"
             } else if let day = interval.day, day > 0 {
-                return day == 1 ? "\(day)" +  s.id.day :
-                    "\(day)" +  s.id.days
+                return day == 1 ? "\(day)" +  "day" :
+                    "\(day)" + "days"
             } else if let hour = interval.hour, hour > 0 {
                 if hour > 1 && hour < 10 {
-                    return "\(hour)" + s.id.hours
+                    return "\(hour)" + "hours"
                 } else {
-                    return "\(hour)" +  s.id.hour }
+                    return "\(hour)" +  "hour" }
 
             } else {
-                return s.id.a_moment
+                return "a moment"
 
             }
 
         }
 
-    func getFormattedTimeFromPicker() -> String {
+  
+
+    func getFormattedDateFromPicker(picker format:String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = constants.default_uipicker_datetime
-
-        let dateString = "\(self)"
-        if let dateObj = dateFormatter.date(from: dateString) {
-
-            dateFormatter.dateFormat = "HH:mm:ss"
-            return dateFormatter.string(from: dateObj)
-        } else {
-            return "\(self)"
-        }
-
-    }
-
-    func getFormattedDateFromPicker() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = constants.default_uipicker_datetime
+        dateFormatter.dateFormat = format
         let dateString = "\(self)"
         if let dateObj = dateFormatter.date(from: dateString) {
 
